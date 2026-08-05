@@ -86,7 +86,8 @@ def download():
 
 @app.route("/MarketMaster.apk")
 def download_apk():
-    return send_from_directory("static", "MarketMaster.apk", as_attachment=True, mimetype="application/vnd.android.package-archive")
+    static_dir = os.path.join(app.root_path, "static")
+    return send_from_directory(static_dir, "MarketMaster.apk", as_attachment=True, mimetype="application/vnd.android.package-archive")
 
 
 # ---------------------------------------------------------------------------
