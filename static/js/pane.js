@@ -154,6 +154,10 @@
         wickDownColor: "#ff3d71",
       });
 
+      if (window.ResizeObserver) {
+        this._ro = new ResizeObserver(() => this.resize());
+        this._ro.observe(this.elChart);
+      }
       requestAnimationFrame(() => this.resize());
     }
 

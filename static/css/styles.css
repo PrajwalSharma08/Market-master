@@ -849,3 +849,127 @@ body {
   padding: 8px 12px;
   border-radius: var(--radius-sm);
 }
+
+/* ---------------------------------------------------------------------------
+   Responsive Mobile & Tablet Media Queries
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  body {
+    display: block !important;
+  }
+
+  /* Toolbar Horizontal Scroll & Wrap for Mobile */
+  .toolbar {
+    height: auto;
+    padding: 8px 12px;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .toolbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toolbar__label {
+    display: none;
+  }
+
+  .conn-pill__label {
+    font-size: 10px;
+  }
+
+  /* Grid Layout: Stacked vertically (1 column) on Mobile */
+  .grid,
+  .grid[data-count="1"],
+  .grid[data-count="2"],
+  .grid[data-count="4"],
+  .grid[data-count="6"],
+  .grid[data-count="8"] {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    gap: 12px !important;
+    padding: 8px !important;
+  }
+
+  .pane {
+    min-height: 420px !important;
+    height: 420px !important;
+    flex: 0 0 420px !important;
+    width: 100% !important;
+  }
+
+  .pane__header {
+    height: auto;
+    padding: 8px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .pane__controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .pane__source {
+    min-width: 110px;
+    font-size: 11px;
+    padding: 4px 20px 4px 8px;
+  }
+
+  .pane__symbol {
+    width: 80px;
+    font-size: 11px;
+    padding: 4px 6px 4px 24px;
+  }
+
+  .pane__interval {
+    min-width: 50px;
+    font-size: 11px;
+    padding: 4px 16px 4px 6px;
+  }
+
+  .pane__btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .pane__ticker {
+    width: 100%;
+    justify-content: space-between;
+    padding: 4px 8px;
+    margin-top: 2px;
+    border-top: 1px solid var(--border);
+  }
+
+  .pane__ticker-price {
+    font-size: 14px;
+  }
+
+  /* Modals & Popovers full-width on mobile */
+  .ind-popover {
+    width: calc(100% - 16px);
+    right: 8px;
+    left: 8px;
+  }
+
+  .bt-drawer {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
