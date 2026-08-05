@@ -79,6 +79,11 @@ def privacy():
     return render_template("privacy.html")
 
 
+@app.route("/download")
+def download():
+    return render_template("download.html")
+
+
 # ---------------------------------------------------------------------------
 # JSON API
 # ---------------------------------------------------------------------------
