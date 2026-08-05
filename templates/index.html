@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Market Master — Live Multi-Chart Trading Dashboard</title>
+
+  <!-- Web App & Mobile Meta Tags -->
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Market Master" />
   
   <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,5 +153,14 @@
   <script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
   <script src="{{ url_for('static', filename='js/pane.js') }}"></script>
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+  <!-- Service Worker Registration for Mobile App Support -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register("{{ url_for('static', filename='sw.js') }}").catch(err => console.log('SW reg error:', err));
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+{
+  "short_name": "Market Master",
+  "name": "Market Master Pro — Live Trading Dashboard",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/000000/line-chart.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/000000/line-chart.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#090d16",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "any"
+}
