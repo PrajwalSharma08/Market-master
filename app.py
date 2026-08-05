@@ -74,6 +74,11 @@ def index():
     return render_template("index.html", intervals=SUPPORTED_INTERVALS)
 
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+
 # ---------------------------------------------------------------------------
 # JSON API
 # ---------------------------------------------------------------------------
