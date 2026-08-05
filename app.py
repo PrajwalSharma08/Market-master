@@ -84,6 +84,11 @@ def download():
     return render_template("download.html")
 
 
+@app.route("/MarketMaster.apk")
+def download_apk():
+    return send_from_directory("static", "MarketMaster.apk", as_attachment=True, mimetype="application/vnd.android.package-archive")
+
+
 # ---------------------------------------------------------------------------
 # JSON API
 # ---------------------------------------------------------------------------
