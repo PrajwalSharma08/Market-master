@@ -161,3 +161,24 @@ will work the moment your `quote()` method returns a `Bar`.
 ## License
 
 Personal project — do whatever you like with it.
+
+## Problem Statement
+[Write problem statement here]
+
+## Dataset
+[Write dataset information here]
+
+## Methodology
+[Write methodology details here]
+
+## Installation
+[Write installation steps here]
+
+## Results
+[Write results here]
+
+## Screenshots
+[Add screenshots here]
+
+## Future Work
+[Write future work here]
